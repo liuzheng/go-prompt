@@ -294,3 +294,7 @@ func (p *Prompt) tearDown() {
 	}
 	p.renderer.TearDown()
 }
+func (p *Prompt) UpdateWinSize(ws *WinSize) {
+	p.renderer.row = ws.Row
+	p.renderer.col = ws.Col
+}
